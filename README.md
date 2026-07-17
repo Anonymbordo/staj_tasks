@@ -16,15 +16,21 @@ Bu repository, staj sürecinde istenilen Java ve Spring Boot görevlerini içerm
 
 ### Hesap Makinesi
 
-<img src="https://raw.githubusercontent.com/Anonymbordo/staj_tasks/main/docs/images/calculator.png" alt="Hesap Makinesi" width="720">
+<img width="813" height="573" alt="image" src="https://github.com/user-attachments/assets/a299600b-0c71-4679-9503-812a2703edba" />
+
+
 
 ### Sayı Tahmin ve Parkur Oyunu
 
-<img src="https://raw.githubusercontent.com/Anonymbordo/staj_tasks/main/docs/images/game-ui.png" alt="Sayı Tahmin ve Parkur Oyunu" width="720">
+<img width="1172" height="666" alt="image" src="https://github.com/user-attachments/assets/8f3f6080-7cea-4cef-b855-30f66836ae5a" />
+
+
 
 ### Spring Boot API Çalışma Görüntüsü
 
-<img src="https://raw.githubusercontent.com/Anonymbordo/staj_tasks/main/docs/images/spring-api.png" alt="Spring Boot API Çalışma Görüntüsü" width="720">
+<img width="1847" height="423" alt="image" src="https://github.com/user-attachments/assets/14955b3d-45cf-4fcc-a49b-c1c3fe443fc4" />
+<img width="1889" height="333" alt="image" src="https://github.com/user-attachments/assets/aeecc01d-229f-4d1e-aa0f-54b794a6310f" />
+
 
 ## Kullanılan Teknolojiler
 
