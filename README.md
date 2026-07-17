@@ -12,6 +12,20 @@ Bu repository, staj sürecinde istenilen Java ve Spring Boot görevlerini içerm
 | Task 4 | Spring Boot ve PostgreSQL ile kullanıcı CRUD uygulaması | [task4-spring-boot-postgresql](./task4-spring-boot-postgresql) |
 | Task 5 | Spring Boot ile kütüphane yönetimi CRUD uygulaması | [task5-library-management](./task5-library-management) |
 
+## Ekran Görselleri
+
+### Hesap Makinesi
+
+![Hesap Makinesi](./docs/images/calculator.png)
+
+### Sayı Tahmin ve Parkur Oyunu
+
+![Sayı Tahmin ve Parkur Oyunu](./docs/images/game-ui.png)
+
+### Spring Boot API Çalışma Görüntüsü
+
+![Spring Boot API Çalışma Görüntüsü](./docs/images/spring-api.png)
+
 ## Kullanılan Teknolojiler
 
 - Java 17
