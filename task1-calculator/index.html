@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelismis Hesap Makinesi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="phone-shell" aria-label="Gelismis hesap makinesi arayuzu">
+        <section class="calculator" aria-label="Bilimsel hesap makinesi">
+            <header class="top-bar">
+                <button class="mode-chip" type="button" data-action="toggle-angle" aria-label="Derece radyan degistir">DEG</button>
+                <span class="brand">Calculator Pro</span>
+                <button class="icon-button" type="button" data-action="toggle-history" aria-label="Gecmis">H</button>
+            </header>
+
+            <section class="screen" aria-label="Hesap ekrani">
+                <div id="historyPanel" class="history-panel" aria-label="Islem gecmisi"></div>
+                <div id="expression" class="expression" aria-live="polite">0</div>
+                <output id="display" class="display" aria-live="polite">0</output>
+            </section>
+
+            <div class="memory-row" aria-label="Hafiza tuslari">
+                <button type="button" data-action="memory-clear">MC</button>
+                <button type="button" data-action="memory-recall">MR</button>
+                <button type="button" data-action="memory-add">M+</button>
+                <button type="button" data-action="memory-subtract">M-</button>
+                <button type="button" data-action="answer">Ans</button>
+            </div>
+
+            <div class="keys" aria-label="Hesap makinesi tuslari">
+                <button class="key utility" type="button" data-action="clear">AC</button>
+                <button class="key utility" type="button" data-action="backspace">⌫</button>
+                <button class="key utility" type="button" data-action="percent">%</button>
+                <button class="key operator" type="button" data-insert="/">÷</button>
+
+                <button class="key scientific" type="button" data-function="sin">sin</button>
+                <button class="key scientific" type="button" data-function="cos">cos</button>
+                <button class="key scientific" type="button" data-function="tan">tan</button>
+                <button class="key operator" type="button" data-insert="*">×</button>
+
+                <button class="key scientific" type="button" data-function="ln">ln</button>
+                <button class="key scientific" type="button" data-function="log">log</button>
+                <button class="key scientific" type="button" data-function="sqrt">sqrt</button>
+                <button class="key operator" type="button" data-insert="-">−</button>
+
+                <button class="key scientific" type="button" data-insert="pi">π</button>
+                <button class="key scientific" type="button" data-insert="e">e</button>
+                <button class="key scientific" type="button" data-action="square">x²</button>
+                <button class="key operator" type="button" data-insert="+">+</button>
+
+                <button class="key" type="button" data-insert="7">7</button>
+                <button class="key" type="button" data-insert="8">8</button>
+                <button class="key" type="button" data-insert="9">9</button>
+                <button class="key operator" type="button" data-insert="^">xʸ</button>
+
+                <button class="key" type="button" data-insert="4">4</button>
+                <button class="key" type="button" data-insert="5">5</button>
+                <button class="key" type="button" data-insert="6">6</button>
+                <button class="key utility" type="button" data-action="inverse">1/x</button>
+
+                <button class="key" type="button" data-insert="1">1</button>
+                <button class="key" type="button" data-insert="2">2</button>
+                <button class="key" type="button" data-insert="3">3</button>
+                <button class="key utility" type="button" data-insert="(">(</button>
+
+                <button class="key zero" type="button" data-insert="0">0</button>
+                <button class="key" type="button" data-action="decimal">,</button>
+                <button class="key utility" type="button" data-insert=")">)</button>
+                <button class="key equals" type="button" data-action="equals">=</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
