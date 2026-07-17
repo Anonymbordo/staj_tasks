@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Oyun Merkezi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="game-panel" aria-label="Task 2 oyun arayuzu">
+            <header class="app-header">
+                <div>
+                    <p class="eyebrow">Task 2</p>
+                    <h1>Oyun Merkezi</h1>
+                </div>
+                <div class="mode-switch" role="tablist" aria-label="Oyun modu secimi">
+                    <button class="mode-button is-active" type="button" data-mode="guess" role="tab" aria-selected="true">Sayı Tahmini</button>
+                    <button class="mode-button" type="button" data-mode="parkour" role="tab" aria-selected="false">Parkur</button>
+                </div>
+            </header>
+
+            <section class="stats-strip" aria-label="Oyun bilgileri">
+                <div>
+                    <span>Skor</span>
+                    <strong id="scoreValue">0</strong>
+                </div>
+                <div>
+                    <span>Süre</span>
+                    <strong id="timeValue">60</strong>
+                </div>
+                <div>
+                    <span>Hak</span>
+                    <strong id="attemptValue">7</strong>
+                </div>
+            </section>
+
+            <section id="guessMode" class="mode-view is-active" aria-label="Sayi tahmin modu">
+                <div class="playfield guess-field">
+                    <div class="range-track" aria-hidden="true">
+                        <span class="range-start">1</span>
+                        <div class="target-pulse"></div>
+                        <span id="rangeEnd" class="range-end">100</span>
+                    </div>
+                    <div class="feedback-zone">
+                        <p id="guessStatus" class="status-text">Aralık seç, başlat ve tahminini gir.</p>
+                        <strong id="guessResult" class="result-text">Hazır</strong>
+                    </div>
+                </div>
+
+                <div class="control-surface">
+                    <label class="field-label" for="rangeSelect">Sayı aralığı</label>
+                    <select id="rangeSelect">
+                        <option value="100">1 - 100</option>
+                        <option value="1000">1 - 1000</option>
+                    </select>
+
+                    <label class="field-label" for="guessInput">Tahmin</label>
+                    <div class="input-row">
+                        <input id="guessInput" type="number" min="1" max="100" placeholder="Tahmin yaz" inputmode="numeric">
+                        <button id="guessButton" class="primary-button" type="button">Gönder</button>
+                    </div>
+
+                    <button id="startGuessButton" class="secondary-button" type="button">Yeni Oyun</button>
+                </div>
+            </section>
+
+            <section id="parkourMode" class="mode-view" aria-label="Matematik parkur modu">
+                <div class="playfield parkour-field">
+                    <div class="skyline" aria-hidden="true"></div>
+                    <div class="course" aria-hidden="true">
+                        <div class="runner" id="runner"></div>
+                        <div class="platform platform-1"></div>
+                        <div class="platform platform-2"></div>
+                        <div class="platform platform-3"></div>
+                        <div class="platform platform-4"></div>
+                        <div class="finish-line"></div>
+                    </div>
+                    <div class="question-board">
+                        <span id="parkourLevel">Engel 1 / 8</span>
+                        <strong id="mathQuestion">Oyunu başlat</strong>
+                    </div>
+                </div>
+
+                <div class="control-surface">
+                    <p id="parkourStatus" class="status-text">Doğru cevap verdikçe koşucu parkurda ilerler.</p>
+                    <label class="field-label" for="answerInput">Cevap</label>
+                    <div class="input-row">
+                        <input id="answerInput" type="number" placeholder="Sonuç" inputmode="numeric">
+                        <button id="answerButton" class="primary-button" type="button">Zıpla</button>
+                    </div>
+                    <button id="startParkourButton" class="secondary-button" type="button">Parkuru Başlat</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
