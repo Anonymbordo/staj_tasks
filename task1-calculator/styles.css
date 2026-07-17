@@ -1,0 +1,246 @@
+:root {
+    color-scheme: dark;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #101113;
+    color: #f5f5f7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12), transparent 28rem), linear-gradient(145deg, #191a1e, #07080a);
+}
+
+button {
+    border: 0;
+    font: inherit;
+}
+
+.phone-shell {
+    width: min(100vw, 30rem);
+    padding: 1rem;
+}
+
+.calculator {
+    width: 100%;
+    min-height: min(52rem, calc(100vh - 2rem));
+    padding: 1.1rem;
+    display: grid;
+    grid-template-rows: auto minmax(9rem, 1fr) auto auto;
+    gap: 0.75rem;
+    border: 0.45rem solid #1f2024;
+    border-radius: 2.75rem;
+    background: #000;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.45), inset 0 0 0 0.08rem rgba(255, 255, 255, 0.08);
+}
+
+.top-bar,
+.memory-row {
+    display: grid;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-bar {
+    grid-template-columns: auto 1fr auto;
+    min-height: 2rem;
+}
+
+.brand {
+    color: #85858a;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mode-chip,
+.icon-button,
+.memory-row button {
+    min-height: 2rem;
+    border-radius: 999rem;
+    background: #202126;
+    color: #f5f5f7;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.mode-chip {
+    min-width: 3.6rem;
+    color: #ff9f0a;
+}
+
+.icon-button {
+    width: 2rem;
+}
+
+.screen {
+    min-width: 0;
+    display: grid;
+    align-content: end;
+    gap: 0.35rem;
+    padding: 0.25rem 0.3rem 0.4rem;
+}
+
+.history-panel {
+    max-height: 5.6rem;
+    overflow: auto;
+    color: #85858a;
+    display: none;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    text-align: right;
+}
+
+.history-panel.is-visible {
+    display: block;
+}
+
+.history-item {
+    padding: 0.15rem 0;
+    border-bottom: 0.06rem solid rgba(255, 255, 255, 0.08);
+}
+
+.expression {
+    min-height: 1.4rem;
+    overflow: hidden;
+    color: #9c9ca2;
+    font-size: 1rem;
+    letter-spacing: 0;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.display {
+    min-width: 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: clamp(2.6rem, 11vw, 4.7rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.memory-row {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.memory-row button {
+    background: #18191d;
+    color: #bdbdc2;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.55rem;
+}
+
+.key {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 3.25rem;
+    aspect-ratio: 1;
+    border-radius: 999rem;
+    background: #333338;
+    color: #fff;
+    cursor: pointer;
+    font-size: clamp(1rem, 4.5vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1;
+    transition: filter 140ms ease, transform 120ms ease;
+    user-select: none;
+}
+
+.key:hover,
+.memory-row button:hover,
+.mode-chip:hover,
+.icon-button:hover {
+    filter: brightness(1.22);
+}
+
+.key:active,
+.memory-row button:active,
+.mode-chip:active,
+.icon-button:active {
+    transform: scale(0.96);
+    filter: brightness(1.35);
+}
+
+.utility {
+    background: #a5a5a5;
+    color: #050505;
+}
+
+.scientific {
+    background: #24252a;
+    color: #f0f0f2;
+    font-size: clamp(0.82rem, 3.7vw, 1.08rem);
+}
+
+.operator,
+.equals {
+    background: #ff9f0a;
+    color: #fff;
+}
+
+.zero {
+    grid-column: span 1;
+}
+
+@media (min-width: 52rem) {
+    .phone-shell {
+        width: min(100vw, 47rem);
+    }
+
+    .calculator {
+        min-height: auto;
+        border-radius: 2.2rem;
+    }
+
+    .keys {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    .key {
+        min-height: 3.7rem;
+        font-size: 1.2rem;
+    }
+
+    .scientific {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 26rem) {
+    .phone-shell {
+        padding: 0.45rem;
+    }
+
+    .calculator {
+        min-height: calc(100vh - 0.9rem);
+        border-radius: 2.15rem;
+        padding: 0.85rem;
+    }
+
+    .keys {
+        gap: 0.45rem;
+    }
+
+    .key {
+        min-height: 2.75rem;
+    }
+}
