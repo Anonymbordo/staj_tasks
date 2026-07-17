@@ -278,16 +278,17 @@ select:focus, input:focus {
 }
 
 .runner {
-    --progress: 0%;
+    --runner-left: 8%;
+    --runner-bottom: 6.8rem;
     position: absolute;
-    left: calc(7% + var(--progress) * 0.78);
-    bottom: 6.8rem;
+    left: var(--runner-left);
+    bottom: var(--runner-bottom);
     width: 2rem;
     height: 2.8rem;
     border-radius: 1rem 1rem 0.45rem 0.45rem;
     background: #60d394;
     box-shadow: 0 0 1.2rem rgba(96, 211, 148, 0.48);
-    transition: left 450ms ease, transform 220ms ease;
+    transition: left 520ms cubic-bezier(0.2, 0.8, 0.2, 1), bottom 520ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 260ms ease;
 }
 
 .runner::before {
@@ -301,7 +302,7 @@ select:focus, input:focus {
     background: #f7f7fb;
 }
 
-.runner.is-jumping { transform: translateY(-2.4rem); }
+.runner.is-jumping { transform: translateY(-3.8rem); }
 
 .platform, .finish-line {
     position: absolute;
